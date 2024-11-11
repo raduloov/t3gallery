@@ -20,7 +20,7 @@
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mdx}\" --cache"
   },
   "dependencies": {
-    "@clerk/nextjs": "^6.3.1",
+    "@clerk/nextjs": "^5.0.0",
     "@sentry/nextjs": "^8",
     "@t3-oss/env-nextjs": "^0.10.1",
     "@uploadthing/react": "^6.4.1",
