@@ -9,6 +9,7 @@ import { TopNav } from "./_components/topnav";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "./api/uploadthing/core";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "T3 Gallery",
@@ -35,13 +36,14 @@ export default function RootLayout({
            */
           routerConfig={extractRouterConfig(ourFileRouter)}
         />
-        <body>
+        <body className="dark">
           <div className="grid h-screen grid-rows-[auto,1fr]">
             <TopNav />
             <main className="overflow-y-scroll">{children}</main>
           </div>
           {modal}
           <div id="modal-root" />
+          <Toaster />
         </body>
       </html>
     </ClerkProvider>
